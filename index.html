@@ -8,6 +8,76 @@
     <title>Responsive Images</title>
 </head>
 <body>
+    <h1>Responsive Images</h1>
+    <section>
+        <h2>Same Image in Different Sizes</h2>
+        <img
+            srcset="img/placeholder_320x320.png 320w,
+                    img/placeholder_640x400.png 640w,
+                    img/placeholder_1024x600.png 1024w"
+            sizes= "(max-width:320px) 320px,
+                    (max-width:640px) 640px,
+                    (max-width:1024px) 1024px"
+            src="img/placeholder_640x400.png" 
+            alt="placeholder image"
+        >
+    </section>
+    <!--
+    <section>
+        <h2>Same Image in Different Sizes (min-width)</h2>
+        <img 
+            srcset="
+                img/placeholder_320x320.png 320w,
+                img/placeholder_640x400.png 640w,
+                img/placeholder_1024x600.png 1024w"
+            sizes="
+                (min-width:1024px) 1024px,
+                (min-width:640px) 640px,
+                (min-width:320px) 320px"
+            src="img/placeholder_640x400.png"
+            alt="placeholder image"
+        >
+    </section> -->
+    <section>
+        <h2>Same size image with different resolutions</h2>
+        <img
+            class="avatar"
+            srcset="img/placeholder_320x320.png 1x,
+                    img/placeholder_640x400.png 2x,
+                    img/placeholder_960x960.png 3x"
+            src="img/placeholder_640x400.png"
+            alt="placeholder image"
+        >
+    </section>
+    <section>
+        <h2>Art Direction / different images for diff. screen sizes and resolutions</h2>
+        <picture>
+                <source srcset="https://via.placeholder.com/960x600"
+                        media="(min-width: 640px)">
+                <source srcset="https://via.placeholder.com/640x400"
+                        media="(min-width: 480px)">
+                <source srcset="https://via.placeholder.com/480x300"
+                        media="(min-width: 320px)">
+                <img src="https://via.placeholder.com/320x300"
+                    alt="placeholder">
+        </picture>
+
+        <picture>
+            <source srcset="img/fall-dog-1200.jpg,
+                            img/fall-dog-2400.jpg 2x,
+                            img/fall-dog-3600.jpg 3x"
+                    media="(min-width:960px)">
+            <source srcset="img/fall-dog-900.jpg,
+                            img/fall-dog-1800.jpg,
+                            img/fall-dog-2700.jpg"
+                    media="(min-width:640px)">
+            <source srcset="img/fall-dog-640.jpg,
+                            img/fall-dog-1280x1280.jpg 2x,
+                            img/fall-dog-1920x1920.jpg 3x"
+                    media="(min-width:320px)">
+            <img src="img/fall-dog-900.jpg" alt="a dog sitting on his cushion">
+        </picture>
+    </section>
     
 </body>
 </html>
